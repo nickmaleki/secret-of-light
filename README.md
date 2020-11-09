@@ -2,7 +2,7 @@
 A code implementation of diagrams found in Walter Russell's book, The Secret of Light. 
 
 
-### GIF of what I have so far
+### What I have so far
 You can see from the *TODOs* in my code that I have not captured every element of the art provided by Walter, but I do have a working starting point. 
 
 ![My Code Running](/pictures/live_update_walter_waves_2.gif)
