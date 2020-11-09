@@ -1,9 +1,9 @@
 import math
 
+import matplotlib
+import matplotlib.animation as animation
 import matplotlib.pyplot as plt
 import numpy as np
-from functools import reduce
-
 
 # https://www.desmos.com/calculator/qfsc3soqxb
 # https://www.desmos.com/calculator/c8oj1awmhn
@@ -14,31 +14,54 @@ from functools import reduce
 # diameter = wavelength / 2
 # radius = diameter / 2
 
-max_wavelength = 10
 
-# Everything is made of cube and sphere, not square and circle.
+matplotlib.use("TkAgg")
+
+max_wavelength = 10
+grid_max = sum(range(1, max_wavelength + 1))
+# TODO: Replace the step function with the intertial line
+x = np.arange(1, grid_max, .1)  # replaced linspace with arange
+
+fig, (ax1, ax2) = plt.subplots(2)
+# ax1.set_xlim([0, grid_max])
+ax1.set_ylim([-max_wavelength, max_wavelength])
+# ax2.set_xlim([0, grid_max])
+ax2.set_ylim([-grid_max, grid_max])
+
+
 # TODO: In order to generate atoms this equation must be re-written in 3 dimensions. Currently, this equation is 1 Dimensional.
 def walter_wave(radius, times):
     output = []
     for time in times:
         # TODO: Sin needs to be computed on the fly
         output.append(np.sign(math.sin((math.pi * time) / (2 * radius))) * math.sqrt((radius ** 2) - ((time % (2 * radius) - radius) ** 2)))
+
+
     return output
 
 
-# TODO: Replace the step function with the intertial line
-x = np.arange(1, sum(range(1, max_wavelength + 1)), .1)  # replaced linspace with arange
-
-for i in range(1, max_wavelength + 1):
-    plt.plot(x, walter_wave(i / 2, x), 'orange')
+global total
+total = []  # TODO: use functional programming to lower space complexity
 
 
-temporary = []  # TODO: use functional programming to lower space complexity
-for i in range(1, max_wavelength + 1):
-    temporary.append(walter_wave(i / 2, x))
+def animate(i):
+    global total
+    f = walter_wave(i / 2, x)
+    ax1.plot(x, f, 'orange')  # update the data
 
-harmony = sum(map(np.array, temporary))
-plt.plot(x, harmony, 'blue')
+    total = f if not total else [sum(pair) for pair in zip(total, f)]
+    # total = f if not total else map((lambda a,b: a+b), zip(total, f))
+    ax2.clear()
+    # ax2.set_ylim([-max_wavelength*grid_max, grid_max*max_wavelength])
+    # ax2.set_ylim([-grid_max, grid_max])
+    ax2.plot([0, grid_max], [0, 0])
+    ax2.plot(x, total, 'blue')
 
-plt.axhline(y=0, color='black')
+
+ani = animation.FuncAnimation(fig, animate, x, interval=25, repeat=False)
+
+plt.xlim(xmin=0, xmax=grid_max)
+mng = plt.get_current_fig_manager()
+mng.window.state('zoomed')
+
 plt.show()
