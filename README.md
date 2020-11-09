@@ -2,10 +2,13 @@
 A code implementation of diagrams found in Walter Russell's book, The Secret of Light. 
 
 ### The first iteration of the periodic table as proposed by Walter Russell
-![Walter Russell Periodic Table 1](https://www.meta-synthesis.com/webbook/35_pt/russ.png =480x)
+<!---Walter Russell Periodic Table 1-->
+<img src="https://www.meta-synthesis.com/webbook/35_pt/russ.png" width="480"/>
+
 
 ### The second iteration of the periodic table
-![Walter Russell Periodic Table 2](https://i.pinimg.com/originals/bf/ee/4d/bfee4db958a4b95b449aa074fdc8da9a.jpg =480x)
+<!---Walter Russell Periodic Table 2-->
+<img src="https://i.pinimg.com/originals/bf/ee/4d/bfee4db958a4b95b449aa074fdc8da9a.jpg" width="480"/>
 
 ### Motivation
 I found this periodic table to be very interesting because it *supposedly* generates atoms from very simple behavior. According to [Quora user Andrew Wolff, Adjunct Professor of Chemistry]https://www.quora.com/Why-was-Walter-Russells-version-of-the-periodic-table-not-adopted-by-chemists, *"The two periodic tables proposed by Walter Russell in 1926 show some remarkable insights and some incorrect predictions. The first iteration predicted a large number of elements before and after hydrogen that simply do not exist. It certainly does appear to predict elements past Uranium, and correctly leaves room for Technetium. Thus, the table had faults and insights. His second table avoids these faults while retaining the predictions of **then-unknown** elements."* I cannot find any evidence of someone trying to implement his art into code, so I decided to give it a shot. 
