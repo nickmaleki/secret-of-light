@@ -4,7 +4,7 @@ A code implementation of diagrams found in Walter Russell's book, The Secret of 
 
 ### GIF of what I have so far
 You can see from the *TODOs* in my code that I have not captured every element of the art provided by Walter, but I do have a working starting point. 
-![My Code Running](live_update_walter_waves.gif)
+
 
 
 ### Motivation
@@ -30,3 +30,8 @@ To answer this, I first urge you to watch a video about the [Double Slit Experim
 ### The second iteration of the periodic table
 <!---Walter Russell Periodic Table 2-->
 <img src="https://i.pinimg.com/originals/bf/ee/4d/bfee4db958a4b95b449aa074fdc8da9a.jpg" width="480"/>
+
+
+
+### Old commits that look cool
+![My Code Running](./pictures/live_update_walter_waves.gif)
