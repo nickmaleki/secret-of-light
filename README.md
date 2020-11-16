@@ -36,7 +36,7 @@ In order to derive this periodic table to the previous one, you must rotate your
 
 
 
-### Old commits that look cool but likely have no real meaning
+### Old commits that look cool but likely have no real meaning to Walter's model of the atom
 ![Commit 2](/pictures/live_update_walter_waves.gif)
 *“In the beginning, there was nothing. And God said, “Let there be light.” And there was light. There was still nothing, but you could see it a lot better.” - Woody Allen*
 
