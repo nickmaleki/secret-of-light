@@ -2,6 +2,11 @@
 A code implementation of diagrams found in Walter Russell's book, The Secret of Light. 
 
 
+### What I have so far
+You can see from the *TODOs* in my code that I have not captured every element of the art provided by Walter, but I do have a working starting point. 
+<!---My Code Running-->
+![My Code Running](/pictures/live_update_walter_waves_2.gif)
+
 ### The first iteration of the periodic table as proposed by Walter Russell
 <!---Walter Russell Periodic Table 1-->
 <img src="https://www.meta-synthesis.com/webbook/35_pt/russ.png" width="480"/>
@@ -13,10 +18,7 @@ In order to derive this periodic table to the previous one, you must rotate your
 <img src="https://i.pinimg.com/originals/bf/ee/4d/bfee4db958a4b95b449aa074fdc8da9a.jpg" width="480"/>
 
 
-### What I have so far
-You can see from the *TODOs* in my code that I have not captured every element of the art provided by Walter, but I do have a working starting point. 
 
-![My Code Running](/pictures/live_update_walter_waves_2.gif)
 
 
 ### Motivation
